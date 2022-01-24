@@ -2,7 +2,7 @@
 FROM node:12-alpine as builder
 # Move our files into directory name "app"
 WORKDIR /usr/src/app
-RUN npm install @angular/cli -g
+RUN npm install @angular/cli@8.0.2 -g
 COPY package*.json ./
 RUN npm install
 COPY .  .
